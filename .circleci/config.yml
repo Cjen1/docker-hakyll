@@ -23,12 +23,6 @@ jobs:
           name: Tag latest docker image
           command: docker tag cjen1/hakyll:"$HAKYLL_VERSION" cjen1/hakyll:latest
       - run:
-          name: Build docker image with extensions
-          command: |
-            set -euf +o pipefail
-            docker load -i /caches/docker-hakyll-ext.tar | true
-            docker build --cache-from=cjen1/hakyll:"$HAKYLL_VERSION"-ext -t cjen1/hakyll:"$HAKYLL_VERSION"-ext -f Dockerfile.ext .
-      - run:
           name: Save Docker image layer cache
           command: |
             mkdir -p /caches
