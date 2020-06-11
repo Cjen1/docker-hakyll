@@ -10,6 +10,6 @@ RUN curl -sSL https://get.haskellstack.org/ | sh -s - -f
 
 COPY stack.yaml.ext /root/.stack/global-project/stack.yaml
 
-RUN stack --resolver lts-13.6 install \
+RUN stack --resolver lts-15.6 install \
   hakyll-favicon \
   hakyll-sass
