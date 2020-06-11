@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install --yes \
 COPY stack.yaml /root/.stack/global-project/stack.yaml
 
 RUN stack upgrade && \
+  stack config set system-ghc --global true && \
   stack --resolver lts-15.6 install \
     base \
     bytestring \
