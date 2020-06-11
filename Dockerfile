@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install --yes \
 COPY stack.yaml /root/.stack/global-project/stack.yaml
 
 RUN stack upgrade && \
-  stack --resolver lts-13.6 install \
+  stack --resolver lts-15.6 install \
     base \
     bytestring \
     conduit-combinators \
