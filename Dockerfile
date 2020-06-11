@@ -1,4 +1,4 @@
-FROM haskell:8.6.3
+FROM haskell:8.8.3
 
 ENV LANG=C.UTF-8 \
   LC_ALL=C.UTF-8
