@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      - HAKYLL_VERSION: 4.12.0.1
     docker:
       - image: docker:stable-git
     steps:
