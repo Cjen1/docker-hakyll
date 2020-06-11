@@ -27,7 +27,6 @@ jobs:
           command: |
             mkdir -p /caches
             docker save -o /caches/docker-hakyll.tar cjen1/hakyll:"$HAKYLL_VERSION"
-            docker save -o /caches/docker-hakyll-ext.tar cjen1/hakyll:"$HAKYLL_VERSION"-ext
       - save_cache:
           key: v1-{{ .Branch }}-"$HAKYLL_VERSION"
           paths:
